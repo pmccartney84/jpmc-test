@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite thread-count="1" name="JPMC Tests" parallel="tests">
+    <!-- True to upload the app in AppPath; False to use the pre-uploaded app in AppURL -->
+    <parameter name="UploadApp" value="true"/>
+
+    <!-- Set AppPath if UploadApp = true; -->
+    <parameter name="AppPath" value="LambdaUiKitIOS.zip"/>
+
+    <!-- Set AppURL if UploadApp = false -->
+    <parameter name="AppURL" value=""/>
+
+    <test name="Demo1" >
+        <classes>
+            <class name="JPMCTest"/>
+        </classes>
+    </test>
+</suite>
